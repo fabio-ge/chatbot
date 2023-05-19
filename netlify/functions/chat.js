@@ -2,7 +2,7 @@ const AI = {
     URL: 'https://api.openai.com/v1/chat/completions',
     headers: {
         "Content-type": "application/json",
-        "Authorization": "Bearer "+API_KEY
+        "Authorization": "Bearer "+process.env.API_KEY
     },
     chat: async function(conversationArray){
         let response = await fetch(this.URL,{
