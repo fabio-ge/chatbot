@@ -18,7 +18,13 @@ form.addEventListener('submit',async (e)=>{
         content: testo.value
     };
     conversationArray.push(conversationObj);
-    let chatRequest = await fetch('/.netlify/functions/chat');
+    let chatRequest = await fetch('/.netlify/functions/chat',{
+        method: "POST",
+        headers: {
+            "Content-type": "text/plain"
+        },
+        body: JSON.stringify(conversationArray)
+    });
     let chatResponse = await chatRequest.json();
     conversationArray.push(chatResponse);
     
