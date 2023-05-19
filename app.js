@@ -21,7 +21,7 @@ form.addEventListener('submit',async (e)=>{
     let chatRequest = await fetch('/.netlify/functions/chat',{
         method: "POST",
         headers: {
-            "Content-type": "text/plain"
+            "Content-type": "application/json"
         },
         body: JSON.stringify(conversationArray)
     });
