@@ -24,7 +24,7 @@ export const handler = async (event) => {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: AI.chat(event.body),
+        message: await AI.chat(event.body),
       }),
     }
   }
