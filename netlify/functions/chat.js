@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 const AI = {
     URL: 'https://api.openai.com/v1/chat/completions',
     headers: {
