@@ -18,6 +18,7 @@ const AI = {
               })
         });
         let data = await response.json();
+        console.log('DATAAAA',data);
         return data.choices[0].message;
     }
 }
